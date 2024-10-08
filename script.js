@@ -60,7 +60,29 @@ async function challengerps(numChoice){
 }
 
 function challenge(){
-    tfChoice = document.getElementById('tfPlayerChoice');
+    tfChoice = document.getElementById('hdChoice');
     playerChoice = tfChoice.value
     challengerps(parseInt(playerChoice));
+}
+
+function initListeners(){
+    const rockChoice = document.getElementById('rock-choice');
+    const paperChoice = document.getElementById('paper-choice');
+    const scissorsChoice = document.getElementById('scissors-choice');
+    const hiddenValue = document.getElementById('hdChoice');
+
+    rockChoice.addEventListener('click', function(event){
+        console.log('> You chose rock!')
+        hiddenValue.value = rps['rock'];
+    })
+
+    paperChoice.addEventListener('click', function(event){
+        console.log('> You chose paper!')
+        hiddenValue.value = rps['paper'];
+    })
+
+    scissorsChoice.addEventListener('click', function(event){
+        console.log('> You chose scissors!')
+        hiddenValue.value = rps['scissors'];
+    })
 }

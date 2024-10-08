@@ -7,12 +7,19 @@
     <link rel="stylesheet" href = "styles.css">
 </head>
 <body>
-    <p>
-        Lets play a game...
-    </p>
-    <input type="text" id="tfPlayerChoice">
-    <button onclick="challenge()">Feeling lucky?</button>
-    <div id = "result"></div>
+    <button onclick = "challenge()" class = "confirmbtn"></button>
+    <div class = "choice-container">
+        <div class = "player-choice" id="rock-choice">
+            ROCK
+        </div>
+        <div class = "player-choice" id="paper-choice">
+            PAPER
+        </div>
+        <div class = "player-choice" id="scissors-choice">
+            SCISSORS
+        </div>
+    </div>
+    <input id = "hdChoice" type="hidden">
 </body>
 <script src="script.js"></script>
 </html>

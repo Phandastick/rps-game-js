@@ -1,0 +1,18 @@
+.confirmbtn{
+    Width: 200px;
+    height:150px;
+}
+
+.choice-container{
+    display:flex;
+    height:500px;
+    border:2px groove black;
+    justify-content:center;
+    gap:150px;
+}
+
+.player-choice{
+    flex:1;
+    max-width: 200px;
+    border:5px groove black;
+}
