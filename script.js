@@ -18,7 +18,7 @@ async function getRandomChoice(){
 function compareRPS(playerChoice, randomChoice){
     if(playerChoice === randomChoice){
         return 'draw'
-    }
+    }   
 
     switch (playerChoice){
         case 'scissors':

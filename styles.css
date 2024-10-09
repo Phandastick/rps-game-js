@@ -1,6 +1,23 @@
+body{
+    display:flex;
+    flex-direction: column;
+}
+
+.title-container{
+    display:flex;
+    flex-direction:row;
+    width:100%
+}
+
+.title-container hr {
+    width: 100%;
+}
+
 .confirmbtn{
-    Width: 200px;
     height:150px;
+    width: 300px;
+    align-self: center;
+    margin:20px;
 }
 
 .choice-container{
