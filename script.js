@@ -1,3 +1,5 @@
+const hiddenValue = document.getElementById('hdChoice');
+
 rps = {
     1:'rock',
     2:'scissors',
@@ -6,7 +8,7 @@ rps = {
 
 async function getRandomChoice(){
     let random = Math.random() * 3;
-    let num = Math.floor(random)
+    let num = Math.ceil(random)
     let result = rps[num]
 
     return await result;
@@ -60,8 +62,7 @@ async function challengerps(numChoice){
 }
 
 function challenge(){
-    tfChoice = document.getElementById('hdChoice');
-    playerChoice = tfChoice.value
+    playerChoice = hiddenValue.value
     challengerps(parseInt(playerChoice));
 }
 
@@ -69,20 +70,23 @@ function initListeners(){
     const rockChoice = document.getElementById('rock-choice');
     const paperChoice = document.getElementById('paper-choice');
     const scissorsChoice = document.getElementById('scissors-choice');
-    const hiddenValue = document.getElementById('hdChoice');
 
-    rockChoice.addEventListener('click', function(event){
+    rockChoice.addEventListener("click", function(){
         console.log('> You chose rock!')
-        hiddenValue.value = rps['rock'];
+        hiddenValue.value = 1;
     })
 
-    paperChoice.addEventListener('click', function(event){
+    paperChoice.addEventListener("click", function(){
         console.log('> You chose paper!')
-        hiddenValue.value = rps['paper'];
+        hiddenValue.value = 3;
     })
 
-    scissorsChoice.addEventListener('click', function(event){
+    scissorsChoice.addEventListener("click", function(){
         console.log('> You chose scissors!')
-        hiddenValue.value = rps['scissors'];
+        hiddenValue.value = 2;
     })
 }
+
+document.addEventListener('DOMContentLoaded', () =>{
+    initListeners();
+})
