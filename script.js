@@ -92,23 +92,23 @@ function updateChoice(){
 }
 
 function initListeners(){
-    const rockChoice = document.getElementById('rock-choice');
-    const paperChoice = document.getElementById('paper-choice');
-    const scissorsChoice = document.getElementById('scissors-choice');
+    const rockcard = document.getElementById('rock-card');
+    const papercard = document.getElementById('paper-card');
+    const scissorscard = document.getElementById('scissors-card');
 
-    rockChoice.addEventListener("click", function(){
+    rockcard.addEventListener("click", function(){
         console.log('> You chose rock!')
         hiddenValue.value = 1;
         updateChoice()
     })
 
-    paperChoice.addEventListener("click", function(){
+    papercard.addEventListener("click", function(){
         console.log('> You chose paper!')
         hiddenValue.value = 3;
         updateChoice()
     })
 
-    scissorsChoice.addEventListener("click", function(){
+    scissorscard.addEventListener("click", function(){
         console.log('> You chose scissors!')
         hiddenValue.value = 2;
         updateChoice()
